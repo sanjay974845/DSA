@@ -7,12 +7,10 @@ class Solution {
         int n = nums.length;
 
         for (int i = 0; i < n - 2; i++) {
-            // Skip duplicate values for i
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
 
-            // Since sorted, if nums[i] > 0, no triplet summing to 0 is possible
             if (nums[i] > 0) {
                 break;
             }
@@ -29,11 +27,9 @@ class Solution {
                     left++;
                     right--;
 
-                    // Skip duplicates for left
                     while (left < right && nums[left] == nums[left - 1]) {
                         left++;
                     }
-                    // Skip duplicates for right
                     while (left < right && nums[right] == nums[right + 1]) {
                         right--;
                     }
@@ -50,4 +46,4 @@ class Solution {
 }
 
         
-
+    
